@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "23c954f0-6fbd-4d57-ad94-3377f4c094c0",
+		"name": "project2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10694986"
+	},
+	"item": [
+		{
+			"name": "filterImage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://node-express-env.eba-c8pizuy3.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/5/52/Domainme.png",
+					"protocol": "http",
+					"host": [
+						"node-express-env",
+						"eba-c8pizuy3",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://upload.wikimedia.org/wikipedia/commons/5/52/Domainme.png"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

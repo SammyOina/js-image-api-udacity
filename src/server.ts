@@ -31,13 +31,12 @@ import {filterImageFromURL, deleteLocalFiles, validateUrl} from './util/util';
 
   //! END @TODO1
   
-  app.get("/filteredimage", async (req, res) => {
-    var imUrl = req.query.image_url;
-    var imageIsValid = await validateUrl(imUrl);
+  app.get("/filteredimage", async (req: express.Request, res: express.Response) => {
+    var imUrl:string = req.query.image_url;
+    var imageIsValid:boolean = await validateUrl(imUrl);
     if (imageIsValid != true) {
       return res.status(422).send("URl is not valid image")
     } else {
-      //Process Image
         const filteredImage:string =await filterImageFromURL(imUrl);
         console.log(filteredImage);
         if(filteredImage===undefined||filteredImage===null)

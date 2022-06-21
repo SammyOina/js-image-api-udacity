@@ -41,8 +41,8 @@ export async function deleteLocalFiles(files: Array<string>) {
 
 export async function validateUrl(url: string) : Promise<boolean>{
      
-  const res = await fetch(url);
-  const buff = await res.blob();
+  const res:Response = await fetch(url);
+  const buff:Blob = await res.blob();
  
   return buff.type.startsWith('image/')
 
